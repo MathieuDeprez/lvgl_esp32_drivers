@@ -37,6 +37,22 @@
 extern "C" {
 #endif
 
+#ifndef TOUCH_CAL_X_OFF
+#define TOUCH_CAL_X_OFF 0
+#endif
+
+#ifndef TOUCH_CAL_X_MUL
+#define TOUCH_CAL_X_MUL 1
+#endif
+
+#ifndef TOUCH_CAL_Y_OFF
+#define TOUCH_CAL_Y_OFF 0
+#endif
+
+#ifndef TOUCH_CAL_Y_MUL
+#define TOUCH_CAL_Y_MUL 1
+#endif
+
 #define FT6236_I2C_SLAVE_ADDR   0x38
 
 /* Maximum border values of the touchscreen pad that the chip can handle */

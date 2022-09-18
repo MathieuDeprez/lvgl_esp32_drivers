@@ -147,8 +147,8 @@ bool ft6x36_read(lv_indev_drv_t *drv, lv_indev_data_t *data) {
 #if CONFIG_LV_FT6X36_INVERT_Y
     touch_inputs.last_y = LV_VER_RES - touch_inputs.last_y;
 #endif
-    data->point.x = touch_inputs.last_x;
-    data->point.y = touch_inputs.last_y;
+    data->point.x = (lv_coord_t)((float)touch_inputs.last_x*TOUCH_CAL_X_MUL)+TOUCH_CAL_X_OFF;
+    data->point.y = (lv_coord_t)((float)touch_inputs.last_y*TOUCH_CAL_Y_MUL)+TOUCH_CAL_Y_OFF;
     data->state = touch_inputs.current_state;
     ESP_LOGD(TAG, "X=%u Y=%u", data->point.x, data->point.y);
 

@@ -82,7 +82,7 @@ void disp_driver_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t *
 #elif defined CONFIG_LV_TFT_DISPLAY_CONTROLLER_ILI9488
     ili9488_flush(drv, area, color_map);
 #elif defined CONFIG_LV_TFT_DISPLAY_CONTROLLER_ST7789
-    st7789_flush(drv, area, color_map);
+    my_st7789_flush(drv, area, color_map);
 #elif defined CONFIG_LV_TFT_DISPLAY_CONTROLLER_ST7796S
     st7796s_flush(drv, area, color_map);
 #elif defined CONFIG_LV_TFT_DISPLAY_CONTROLLER_ST7735S
