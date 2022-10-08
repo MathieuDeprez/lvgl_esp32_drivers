@@ -172,6 +172,8 @@ typedef struct
   lv_indev_state_t current_state;
 } ft6x36_touch_t;
 
+extern uint32_t timer_last_touch;
+
 #if CONFIG_LV_FT6X36_COORDINATES_QUEUE
 extern QueueHandle_t ft6x36_touch_queue_handle;
 #endif

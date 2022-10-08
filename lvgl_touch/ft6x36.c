@@ -151,6 +151,7 @@ bool ft6x36_read(lv_indev_drv_t *drv, lv_indev_data_t *data) {
     data->point.y = (lv_coord_t)((float)touch_inputs.last_y*TOUCH_CAL_Y_MUL)+TOUCH_CAL_Y_OFF;
     data->state = touch_inputs.current_state;
     ESP_LOGD(TAG, "X=%u Y=%u", data->point.x, data->point.y);
+    timer_last_touch = esp_timer_get_time() / 1000;
 
 #if CONFIG_LV_FT6X36_COORDINATES_QUEUE
     xQueueOverwrite( ft6x36_touch_queue_handle, &touch_inputs );
