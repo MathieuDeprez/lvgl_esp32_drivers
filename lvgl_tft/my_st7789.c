@@ -132,8 +132,8 @@ void my_st7789_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t * c
     uint16_t offsety1 = area->y1;
     uint16_t offsety2 = area->y2;
 
-    offsety1 += 80;
-    offsety2 += 80;
+    //offsety1 += 80;
+    //offsety2 += 80;
 
     /*Column addresses*/
     st7789_send_cmd(ST7789_CASET);
